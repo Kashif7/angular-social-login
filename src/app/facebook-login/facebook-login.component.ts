@@ -38,9 +38,10 @@ export class FacebookLoginComponent implements OnInit {
     statusChangeCallback(resp) {
       if (resp.status === 'connected') {
         console.log('Welcome!  Fetching your information.... ');
+        let self = this;
         FB.api('/me', function (response) {
           console.log('Successful login for: ' + response.name);
-          this.setLogin(true, response);
+          self.setLogin(true, response);
           //   document.getElementById('status').innerHTML =
           //     'Thanks for logging in, ' + response.name + '!';
         });
