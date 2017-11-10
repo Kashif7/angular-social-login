@@ -1,1 +1,3 @@
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<div *ngIf="!isGoogleLogin" class="g-signin2" data-onsuccess="onSignIn"></div>
+<button *ngIf="isGoogleLogin" (click)="signOut();" class="loginBtn loginBtn--google">Sign out</button>
+<div *ngIf="isGoogleLogin" class="g-plus" data-action="share" data-annotation="bubble" data-height="24"></div>
