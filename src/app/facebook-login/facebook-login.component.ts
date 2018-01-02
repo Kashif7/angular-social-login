@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { Router} from "@angular/router";
+import { Router} from '@angular/router';
 
 
-declare const FB:any;
+declare const FB: any;
 
 @Component({
     selector: 'app-facebook-login',
@@ -26,7 +26,6 @@ export class FacebookLoginComponent implements OnInit {
         FB.login(response => {
             this.statusChangeCallback(response);
         });
-        
         // //FB.getLoginStatus(response => {
         //     this.statusChangeCallback(response);
         // });
@@ -45,7 +44,8 @@ export class FacebookLoginComponent implements OnInit {
         }else {
             
         }
-    };
+    }
+
     ngOnInit() {
         FB.getLoginStatus(response => {
             this.statusChangeCallback(response);

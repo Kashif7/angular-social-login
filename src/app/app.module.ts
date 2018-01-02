@@ -5,16 +5,25 @@ import { AppComponent } from './app.component';
 import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
 import { LinkedinLoginComponent } from './linkedin-login/linkedin-login.component';
 import { GoogleLoginComponent } from './google-login/google-login.component';
-
+import { LinkedinOauthLoginComponent } from './linkedin-oauth-login/linkedin-oauth-login.component';
+import { RoutingCallbackComponent } from './routing-callback/routing-callback.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import { RoutingModule } from './routing/routing.module';
 @NgModule({
   declarations: [
     AppComponent,
     FacebookLoginComponent,
     LinkedinLoginComponent,
-    GoogleLoginComponent
+    GoogleLoginComponent,
+    LinkedinOauthLoginComponent,
+    RoutingCallbackComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

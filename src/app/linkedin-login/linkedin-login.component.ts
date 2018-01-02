@@ -11,19 +11,19 @@ export class LinkedinLoginComponent implements OnInit {
 
   constructor(private ngZone: NgZone) {
     window['onLinkedInLoad'] = () => ngZone.run(() => this.onLinkedInLoad());
-    //window['displayProfiles'] = (profiles) => ngZone.run(() => this.displayProfiles(profiles));
-    //window['displayProfilesErrors'] = (error) => ngZone.run(() => this.displayProfilesErrors(error));
+    // window['displayProfiles'] = (profiles) => ngZone.run(() => this.displayProfiles(profiles));
+    // window['displayProfilesErrors'] = (error) => ngZone.run(() => this.displayProfilesErrors(error));
 
   }
 
   ngOnInit() {
-    var linkedIn = document.createElement("script");
-    linkedIn.type = "text/javascript";
-    linkedIn.src = "http://platform.linkedin.com/in.js";
-    linkedIn.innerHTML = "\n" +
-      "api_key: 81n4k6z8ejnxwi\n" +
-      "authorize: true\n" +
-      "onLoad: onLinkedInLoad\n";
+    const linkedIn = document.createElement('script');
+    linkedIn.type = 'text/javascript';
+    linkedIn.src = 'http://platform.linkedin.com/in.js';
+    linkedIn.innerHTML = '\n' +
+      'api_key: 81n4k6z8ejnxwi\n' +
+      'authorize: true\n' +
+      'onLoad: onLinkedInLoad\n';
     document.head.appendChild(linkedIn);
   }
 
@@ -33,7 +33,7 @@ export class LinkedinLoginComponent implements OnInit {
   // }
 
   onLinkedInLoad() {
-    IN.Event.on(IN, "auth", this.getProfileData);
+    IN.Event.on(IN, 'auth', this.getProfileData);
 }
 
 // Handle the successful return from the API call
@@ -48,7 +48,7 @@ onError(error) {
 
 // Use the API call wrapper to request the member's basic profile data
 getProfileData() {
-    IN.API.Raw("/people/~").result((data) => {
+    IN.API.Raw('/people/~').result((data) => {
       console.log(data);
     }).error((error) => {
       console.log(error);
