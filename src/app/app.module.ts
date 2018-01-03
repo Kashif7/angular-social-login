@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
@@ -23,7 +24,8 @@ import { RoutingModule } from './routing/routing.module';
   imports: [
     BrowserModule,
     RouterModule,
-    RoutingModule
+    RoutingModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

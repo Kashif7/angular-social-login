@@ -25,7 +25,7 @@ export class FacebookLoginComponent implements OnInit {
     onFacebookLoginClick() {
         FB.login(response => {
             this.statusChangeCallback(response);
-        });
+        }, {scope: 'email', return_scopes: true});
         // //FB.getLoginStatus(response => {
         //     this.statusChangeCallback(response);
         // });
@@ -34,8 +34,10 @@ export class FacebookLoginComponent implements OnInit {
     statusChangeCallback(resp) {
         if (resp.status === 'connected') {
             console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function(response) {
-              console.log('Successful login for: ' + response.name);
+            const access_token =   FB.getAuthResponse()['accessToken'];
+            console.log('Access Token = ' + access_token);
+            FB.api('/me?fields=id,first_name,last_name,email,locale,gender', function(response) {
+              console.log('Successful login for: ' , response);
             //   document.getElementById('status').innerHTML =
             //     'Thanks for logging in, ' + response.name + '!';
             });
