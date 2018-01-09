@@ -1,3 +1,4 @@
+///<reference path="saml-test/saml-test.component.ts"/>
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule  } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -11,12 +12,14 @@ import { RoutingCallbackComponent } from './routing-callback/routing-callback.co
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { RoutingModule } from './routing/routing.module';
+import { SamlTestComponent } from './saml-test/saml-test.component';
 @NgModule({
   declarations: [
     AppComponent,
     FacebookLoginComponent,
     LinkedinLoginComponent,
     GoogleLoginComponent,
+    SamlTestComponent,
     LinkedinOauthLoginComponent,
     RoutingCallbackComponent,
     HomeComponent

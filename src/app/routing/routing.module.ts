@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { RoutingCallbackComponent } from '../routing-callback/routing-callback.component';
 import { HomeComponent } from '../home/home.component';
+import { SamlTestComponent } from '../saml-test/saml-test.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,11 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  { path : '', redirectTo : 'home', pathMatch : 'full'}
+  { path : '', redirectTo : 'home', pathMatch : 'full'},
+  {
+    path: 'redde_url',
+    component: SamlTestComponent
+  },
 ];
 
 

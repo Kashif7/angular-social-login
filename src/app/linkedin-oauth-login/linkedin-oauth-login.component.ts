@@ -11,7 +11,7 @@ export class LinkedinOauthLoginComponent implements OnInit {
   n = this.d.getTime();
   authUrl: string;
   responseTypeValue = 'code';
-  clientIdValue = '8158gwrh891m4q';
+  clientIdValue = '81m34rys3t63kz';
   redirectUriValue = encodeURIComponent('http://localhost:4200/callback');
   stateValue = this.n.toString();
   scopeValue = 'r_basicprofile';
