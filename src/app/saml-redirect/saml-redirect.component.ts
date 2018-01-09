@@ -15,6 +15,7 @@ export class SamlRedirectComponent implements OnInit {
     this._activatedRoute.queryParams.subscribe(params => {
       if (params['SAMLResponse']) {
         this.param = decodeURIComponent(params['SAMLResponse']);
+        console.log('fdjfdpo', this.param);
       }
     });
   }
