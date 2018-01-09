@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   { path : '', redirectTo : 'home', pathMatch : 'full'},
   {
-    path: 'redde_url',
+    path: 'samlAuth',
     component: SamlTestComponent
   },
 ];

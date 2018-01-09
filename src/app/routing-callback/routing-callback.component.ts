@@ -14,7 +14,7 @@ export class RoutingCallbackComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
       this.code = params['code'];
-      console.log(this.code); // Print the parameter to the console. 
+      console.log(this.code); // Print the parameter to the console.
 
       const body = new URLSearchParams();
 
