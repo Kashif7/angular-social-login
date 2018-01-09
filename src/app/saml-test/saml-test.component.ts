@@ -36,8 +36,7 @@ export class SamlTestComponent implements OnInit, AfterViewInit {
 
   post() {
     this._http.post(this.identityProviderUrl, {
-      'SAMLRequest': this.SAMLRequest,
-      'RelayState': this.RelayState
+      'SAMLRequest': this.SAMLRequest
     }).subscribe((response) => {
       console.log(response);
     });
