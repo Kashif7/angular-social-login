@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RoutingCallbackComponent } from '../routing-callback/routing-callback.component';
 import { HomeComponent } from '../home/home.component';
 import { SamlTestComponent } from '../saml-test/saml-test.component';
+import { SamlRedirectComponent } from '../saml-redirect/saml-redirect.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
     path: 'samlAuth',
     component: SamlTestComponent
   },
+  {
+    path: 'samlCallback',
+    component: SamlRedirectComponent
+  }
 ];
 
 

@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { RoutingModule } from './routing/routing.module';
 import { SamlTestComponent } from './saml-test/saml-test.component';
+import { SamlRedirectComponent } from './saml-redirect/saml-redirect.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { SamlTestComponent } from './saml-test/saml-test.component';
     SamlTestComponent,
     LinkedinOauthLoginComponent,
     RoutingCallbackComponent,
-    HomeComponent
+    HomeComponent,
+    SamlRedirectComponent
   ],
   imports: [
     BrowserModule,
